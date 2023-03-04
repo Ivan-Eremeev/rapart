@@ -6036,6 +6036,14 @@ body.lock {
 .navpage ul li {
   margin: 10px 0;
 }
+.navpage ul li a {
+  color: #4163BC;
+}
+@media (min-width: 769px) {
+  .navpage ul li a:hover {
+    color: #151519;
+  }
+}
 
 /* /settings */
 /* title */
