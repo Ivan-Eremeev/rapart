@@ -6037,6 +6037,7 @@ body.lock {
   margin: 10px 0;
 }
 .navpage ul li a {
+  font-weight: 500;
   color: #4163BC;
 }
 @media (min-width: 769px) {

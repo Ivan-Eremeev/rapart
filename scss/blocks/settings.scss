@@ -46,6 +46,7 @@ body {
     li {
       margin: 10px 0;
       a {
+        font-weight: 500;
         color: $primary_color;
         @include media-breakpoint-up(md) {
           &:hover {
