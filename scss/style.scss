@@ -8,8 +8,8 @@ $grid-columns: 12; // Колличество колонок
 $grid-breakpoints: ( // Брейкпоинты
   xs: 0,
   sm: 576px,
-  md: 768px,
-  lg: 992px,
+  md: 769px,
+  lg: 1025px,
   xl: 1200px,
   xxl: 1300px
 ) !default;
@@ -39,7 +39,7 @@ $spacers: (
   5: $grid-gutter-width * 2,
 );
 
-// @import 'bootstrap/bootstrap'; // Подключение бутстрап
+@import 'bootstrap/bootstrap'; // Подключение бутстрап
 
 // Шрифты
 @include font-face("Lato", "../fonts/lato/Lato-Thin", 100, normal);
@@ -69,6 +69,12 @@ $border_color: #D9D9D9;
 // @import 'blocks/accordion';
 // @import 'blocks/js-scrollup';
 // @import 'blocks/counter';
-@import 'blocks/header';
+@import 'blocks/title';
+@import 'blocks/subtitle';
 
-// @import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/welcome';
+@import 'blocks/services';
+@import 'blocks/benefit';
+
+@import 'blocks/footer';

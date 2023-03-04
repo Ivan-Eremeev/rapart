@@ -1,5 +1,42 @@
 // header
 header#headerSticky.header
-  .wrapper 
-    | header
+  .header__top 
+    .container 
+      .header__links 
+        a(href="#") +7(495)798-75-44
+        a(href="#") info@rapart.aero
+      .header__user-block 
+        a(href="#").header__user-icon 
+          svg(class="icon-man")
+            use(xlink:href="img/sprite.svg#man")
+        .header__lang 
+          .header__lang-head.js-drop-btn(data-drop="langMenu") RUS
+            svg(class="icon-arrow-down")
+              use(xlink:href="img/sprite.svg#arrow-down")
+          .header__lang-drop#langMenu 
+            ul.header__drop-list 
+              li 
+                a(href="#") En
+              li 
+                a(href="#") GER 
+              li 
+                a(href="#") ITA
+              li 
+                a(href="#") FR
+  .header__bottom 
+    .container 
+      a.header__logo(href="#") 
+        img(src="img/logo.svg", alt="")
+      nav.header__nav 
+        ul.header__list 
+          li 
+            a(href="#") О компании
+          li 
+            a(href="#") Каталог
+          li 
+            a(href="#") Серверы
+          li 
+            a(href="#") Новости
+          li 
+            a(href="#") Контакты
 //	/header
