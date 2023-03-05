@@ -1,0 +1,16 @@
+mixin page-head(title)
+  // page-head
+  .page-head
+    .page-head__img 
+      img(src="img/page-head-bg.jpg", alt="")
+    .container 
+      // breadcrumbs
+      .breadcrumbs
+        ul 
+          li 
+            a(href="#") Главная
+          li 
+            span= title 
+      // /breadcrumbs
+      h1.title= title
+  // /page-head

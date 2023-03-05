@@ -1,0 +1,27 @@
+/* about */
+.about { 
+  margin-bottom: 130px;
+  .subtitle {
+    margin-bottom: 70px;
+  }
+  &__text {
+    margin-bottom: 75px;
+  }
+  &__items {
+
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    fill: $primary_color;
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+  }
+}
+/* /about */
