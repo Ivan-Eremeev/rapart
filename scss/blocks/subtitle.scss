@@ -32,5 +32,21 @@
       right: 0;
     }
   }
+  &--center {
+    text-align: center;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    &--quote {
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: 0;
+      margin-right: 0;
+      &:after, &:before {
+        width: 13px;
+        height: 14px;
+      }
+    }
+  }
 }
 /* /subtitle */

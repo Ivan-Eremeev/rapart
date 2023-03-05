@@ -60,5 +60,41 @@
       }
     }
   }
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+    text-align: center;
+    &__top {
+      display: block;
+      margin-bottom: 33px;
+    }
+    &__logo {
+      display: block;
+      margin-bottom: 25px;
+    }
+    &__list {
+      display: block;
+      margin-left: 0;
+      li {
+        margin: 17px 0;
+      }
+    }
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__license {
+      margin-right: 0;
+      order: 1;
+    }
+    &__link {
+      &--hot-line {
+        margin-bottom: 25px;
+      }
+      &--user-agreement {
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 /* /footer */

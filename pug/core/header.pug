@@ -1,10 +1,10 @@
 // header
-header#headerSticky.header
+header.header
   .header__top 
     .container 
       .header__links 
         a(href="#") +7(495)798-75-44
-        a(href="#") info@rapart.aero
+        a(href="#").d-md-inline.d-none info@rapart.aero
       .header__user-block 
         a(href="#").header__user-icon 
           svg(class="icon-man")
@@ -27,7 +27,11 @@ header#headerSticky.header
     .container 
       a.header__logo(href="#") 
         img(src="img/logo.svg", alt="")
-      nav.header__nav 
+      .hamburger.hamburger--squeeze.js-drop-menu(data-drop="menuMobile")
+        .hamburger-box
+          .hamburger-inner
+      nav.header__nav#menuMobile 
+        .header__close.js-drop-close(data-drop="menuMobile")
         ul.header__list 
           li 
             a(href="#") О компании

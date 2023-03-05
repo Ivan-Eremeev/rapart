@@ -44,8 +44,22 @@
     z-index: 2;
   }
   @include media-breakpoint-down(md) {
+    margin-bottom: 35px;
+    .subtitle {
+      margin-bottom: 20px;
+    }
+    .row {
+      margin-top: -12px;
+      > * {
+        margin-top: 12px;
+      }
+    }
     &__item {
       min-height: 200px;
+      padding: 20px;
+    }
+    &__name {
+      font-size: 18px;
     }
   }
   @include media-breakpoint-down(sm) {
