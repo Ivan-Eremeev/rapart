@@ -114,12 +114,13 @@
   &__logo {
     display: block;
     max-width: 150px;
+    padding: 4px 0;
     img {
       display: block;
     }
   }
   &__nav {
-    
+    padding: 8px 0;
   }
   &__list {
     display: flex;

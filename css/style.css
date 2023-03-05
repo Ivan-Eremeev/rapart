@@ -6405,9 +6405,13 @@ body.lock {
 .header__logo {
   display: block;
   max-width: 150px;
+  padding: 4px 0;
 }
 .header__logo img {
   display: block;
+}
+.header__nav {
+  padding: 8px 0;
 }
 .header__list {
   display: -webkit-box;
