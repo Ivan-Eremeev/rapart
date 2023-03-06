@@ -36,6 +36,25 @@ window.onload = function () {
   //   });
   // }
 
+  // Swiper | Слайдер "сотрудники"
+  if ($('#sliderStaffHead').length) {
+    const sliderStaffHead = new Swiper('#sliderStaffHead', {
+      slidesPerView: 'auto',
+      spaceBetween: 100,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    const sliderStaffBody = new Swiper('#sliderStaffBody', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      simulateTouch: false,
+      effect: 'fade',
+      thumbs: {
+        swiper: sliderStaffHead,
+      },
+    });
+  }
+
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
   //   position: 'right top',
