@@ -142,6 +142,40 @@ window.onload = function () {
     });
   }
 
+  if ($('#sliderSertificates').length) {
+
+    let sliderStaff;
+    let init = false;
+    function sliderToggle() {
+      if ($(window).width() <= 1024 && !init) {
+        init = true;
+        sliderStaff = new Swiper('#sliderSertificates', {
+          slidesPerView: 2.3,
+          spaceBetween: 30,
+          pagination: false,
+          navigation: false,
+          pagination: {
+            el: '.sliderSertificates__pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            576: {
+              slidesPerView: 3,
+            },
+          }
+        });
+      } else if ($(window).width() > 1024 && init) {
+        init = false;
+        sliderStaff.destroy();
+      }
+    };
+    sliderToggle();
+    $(window).resize(function () {
+      sliderToggle();
+    });
+
+  }
+
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
   //   position: 'right top',
