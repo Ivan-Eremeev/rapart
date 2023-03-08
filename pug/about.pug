@@ -19,17 +19,24 @@ block content
         .container 
           h2.subtitle Мы видим себя ядром системы материально-технического снабжения российской гражданской авиационной техники. Такой системы, которая была бы одной из причин для заказчиков отдавать предпочтение отечественным самолетам.
           .about__text 
-            .row 
+            .row
               .col-6 Достижение этой цели невозможно без скоординированного приложения усилий всех вовлеченных сторон – авиапроизводителей, поставщиков компонентов, авиакомпаний, центров по техническому обслуживанию и органов власти. RApart использует свое уникальное стратегическое положение – одновременное вхождение в корпоративную структуру дивизиона гражданской авиации и гибкость специализированного центра прибыли для достижения максимально эффективного ведения деятельности. 
               .col-6 Обладая мотивированной и профессиональной командой, РАпарт Сервисез формирует и постоянно совершенствует свою передовую транспортную и складскую инфраструктуру, обеспечивает разумно достаточную финансовую и материальную ресурсную базу, внедряет эффективные бизнес-процессы, развивает отношения с партнерской сетью, а также обеспечивает неукоснительное выполнение требований сертифицированной системы управления качеством таким образом, чтобы полностью удовлетворять требования своих заказчиков, как по скорости поставки запасных частей и услуг по МТО, их качеству, так и по цене.
+          .about__text-mobile 
+            p Достижение этой цели невозможно без скоординированного приложения усилий всех вовлеченных сторон – авиапроизводителей, поставщиков компонентов, авиакомпаний, центров по техническому обслуживанию и органов власти.
+            p(data-textshow="aboutText").hide RApart использует свое уникальное стратегическое положение – одновременное вхождение в корпоративную структуру дивизиона гражданской авиации и гибкость специализированного центра прибыли для достижения максимально эффективного ведения деятельности. 
+            p(data-textshow="aboutText").hide Обладая мотивированной и профессиональной командой, РАпарт Сервисез формирует и постоянно совершенствует свою передовую транспортную и складскую инфраструктуру, обеспечивает разумно достаточную финансовую и материальную ресурсную базу, внедряет эффективные бизнес-процессы, развивает отношения с партнерской сетью, а также обеспечивает неукоснительное выполнение требований сертифицированной системы управления качеством таким образом, чтобы полностью удовлетворять требования своих заказчиков, как по скорости поставки запасных частей и услуг по МТО, их качеству, так и по цене.
+            .about__more.js-link-text-hide(data-textshow="aboutText") Показать больше
+              svg(class="icon-arrow-right-long")
+                use(xlink:href="img/sprite.svg#arrow-right-long")
           .about__items 
-            .row 
-              .col-6
+            .row.gy-2
+              .col-md-6
                 .about__item 
                   svg(class="icon-star")
                     use(xlink:href="img/sprite.svg#star")
                   | Работаем с 01 октября 2018 года
-              .col-6
+              .col-md-6
                 .about__item 
                   svg(class="icon-star")
                     use(xlink:href="img/sprite.svg#star")
@@ -48,94 +55,6 @@ block content
             .director__img 
               img(src="img/director.jpg", alt="")
       // /director
-
-      //- // staff
-      //- .staff
-      //-   .container 
-
-      //-     .staff__slider-head 
-      //-       .js-sliderStaffHead 
-      //-         .swiper-wrapper 
-      //-           .swiper-slide 
-      //-             .staff__title Совет директоров
-      //-           .swiper-slide 
-      //-             .staff__title Заместители генерального директора
-
-      //-     .staff__slider-body 
-      //-       .js-sliderStaffBody 
-      //-         .swiper-wrapper 
-      //-           .swiper-slide 
-                
-      //-             .staff__slider 
-      //-               .js-sliderStaff
-      //-                 .swiper-wrapper 
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-1.jpg", alt="")
-      //-                       .staff__name Юорисенко Д.В
-      //-                       .staff__text Заместитель ген.директора по послепродажному обслуживанию гражданской АТ ПАО “Корпорация Иркут”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-2.jpg", alt="")
-      //-                       .staff__name Окупов В.М
-      //-                       .staff__text Советник Генерального директора по гражданской авиации ПАО “ОАК”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-3.jpg", alt="")
-      //-                       .staff__name Хакимов Р.Р
-      //-                       .staff__text Генеральный директор ПАО “Корпорация Иркут”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-4.jpg", alt="")
-      //-                       .staff__name Лекашевичус Д.Р
-      //-                       .staff__text Генеральный директор ООО “Рапарт Сервис”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-5.jpg", alt="")
-      //-                       .staff__name Прутковский В.Б
-      //-                       .staff__text Заместитель геен.директора, исполнительный директор ПАО “Корпорация Иркут”
-
-      //-           .swiper-slide 
-                
-      //-             .staff__slider 
-      //-               .js-sliderStaff
-      //-                 .swiper-wrapper 
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-2.jpg", alt="")
-      //-                       .staff__name Окупов В.М
-      //-                       .staff__text Советник Генерального директора по гражданской авиации ПАО “ОАК”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-1.jpg", alt="")
-      //-                       .staff__name Юорисенко Д.В
-      //-                       .staff__text Заместитель ген.директора по послепродажному обслуживанию гражданской АТ ПАО “Корпорация Иркут”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-4.jpg", alt="")
-      //-                       .staff__name Лекашевичус Д.Р
-      //-                       .staff__text Генеральный директор ООО “Рапарт Сервис”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-5.jpg", alt="")
-      //-                       .staff__name Прутковский В.Б
-      //-                       .staff__text Заместитель геен.директора, исполнительный директор ПАО “Корпорация Иркут”
-      //-                   .swiper-slide 
-      //-                     .staff__item 
-      //-                       .staff__img 
-      //-                         img(src="img/staff/img-3.jpg", alt="")
-      //-                       .staff__name Хакимов Р.Р
-      //-                       .staff__text Генеральный директор ПАО “Корпорация Иркут”
-      //- // /staff
 
       // staff
       .staff
@@ -282,50 +201,48 @@ block content
           h2.subtitle.subtitle--uppercase Наши партнеры
           .partners__items 
             .row.g-0
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-1.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-2.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-3.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-4.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-5.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-6.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-7.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-8.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-9.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-10.jpg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-11.png", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-12.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-13.svg", alt="")
-              .col-lg-3
+              .col-lg-3.col-md-4.col-6
                 .partners__item 
                   img(src="img/partners/img-14.png", alt="")
-              .col-lg-3
-              .col-lg-3
       // /partners
 
     include core/footer.pug

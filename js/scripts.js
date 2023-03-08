@@ -435,4 +435,16 @@ window.onload = function () {
   dropBlock($('.js-drop-btn'));
   dropBlock($('.js-drop-menu'), true);
 
+  function textShow() {
+    let link = $('.js-link-text-hide');
+    link.on('click', function () {
+      let linkCurrent = $(this);
+      let data = linkCurrent.data('textshow');
+      let text = $('[data-textshow= "' + data + '"]');
+      text.removeClass('hide');
+      linkCurrent.hide();
+    })
+  }
+  textShow();
+
 }

@@ -1,5 +1,6 @@
 /* director */
 .director { 
+  margin-bottom: 60px;
   .subtitle {
     margin-bottom: 50px;
   }
@@ -8,7 +9,6 @@
     background-color: $gray_color;
     border-radius: 0 10px;
     overflow: hidden;
-    margin-bottom: 60px;
   }
   &__content {
     flex-grow: 1;
@@ -56,6 +56,63 @@
     width: 386px;
     img {
       display: block;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__content {
+      padding: 30px;
+    }
+    &__img {
+      width: 300px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 25px;
+    .subtitle {
+      margin-bottom: 20px;
+    }
+    &__block {
+      flex-wrap: wrap;
+    }
+    &__content {
+      padding: 20px;
+    }
+    &__name {
+      font-size: 18px;
+      line-height: 129%;
+      margin-bottom: 14px;
+    }
+    &__position {
+      font-size: 16px;
+      margin-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    &__quote {
+      padding: 0 18px;
+      margin-left: -10px;
+      margin-right: -10px;
+      font-size: 16px;
+      line-height: 167.5%;
+      &:before, &:after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+    &__img {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__img {
+      img {
+        height: 220px;
+      }
     }
   }
 }

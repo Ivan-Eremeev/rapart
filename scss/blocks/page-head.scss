@@ -26,5 +26,12 @@
       object-position: center bottom;
     }
   }
+  @include media-breakpoint-down(md) {
+    padding: 85px 0 50px;
+    margin-bottom: 30px;
+    .breadcrumbs {
+      display: none;
+    }
+  }
 }
 /* /page-head */

@@ -23,6 +23,9 @@
       a {
         font-weight: 300;
         color: $grayText_color;
+        &:hover {
+          color: $primary_color;
+        }
       }
       span {
         font-weight: 600;

@@ -65,7 +65,11 @@
 			<div class="content"> 
 								<!-- page-head-->
 								<div class="page-head">
-									<div class="page-head__img"> <img src="img/page-head-bg.jpg" alt=""></div>
+									<div class="page-head__img"> 
+										<picture> 
+											<source media="(max-width: 575px)" srcset="img/page-head-bg-mobile.jpg"><img src="img/page-head-bg.jpg" alt="">
+										</picture>
+									</div>
 									<div class="container"> 
 										<!-- breadcrumbs-->
 										<div class="breadcrumbs">
@@ -84,21 +88,31 @@
 					<div class="container"> 
 						<h2 class="subtitle">Мы видим себя ядром системы материально-технического снабжения российской гражданской авиационной техники. Такой системы, которая была бы одной из причин для заказчиков отдавать предпочтение отечественным самолетам.</h2>
 						<div class="about__text"> 
-							<div class="row"> 
+							<div class="row">
 								<div class="col-6">Достижение этой цели невозможно без скоординированного приложения усилий всех вовлеченных сторон – авиапроизводителей, поставщиков компонентов, авиакомпаний, центров по техническому обслуживанию и органов власти. RApart использует свое уникальное стратегическое положение – одновременное вхождение в корпоративную структуру дивизиона гражданской авиации и гибкость специализированного центра прибыли для достижения максимально эффективного ведения деятельности. </div>
 								<div class="col-6">Обладая мотивированной и профессиональной командой, РАпарт Сервисез формирует и постоянно совершенствует свою передовую транспортную и складскую инфраструктуру, обеспечивает разумно достаточную финансовую и материальную ресурсную базу, внедряет эффективные бизнес-процессы, развивает отношения с партнерской сетью, а также обеспечивает неукоснительное выполнение требований сертифицированной системы управления качеством таким образом, чтобы полностью удовлетворять требования своих заказчиков, как по скорости поставки запасных частей и услуг по МТО, их качеству, так и по цене.</div>
 							</div>
 						</div>
+						<div class="about__text-mobile"> 
+							<p>Достижение этой цели невозможно без скоординированного приложения усилий всех вовлеченных сторон – авиапроизводителей, поставщиков компонентов, авиакомпаний, центров по техническому обслуживанию и органов власти.</p>
+							<p class="hide" data-textshow="aboutText">RApart использует свое уникальное стратегическое положение – одновременное вхождение в корпоративную структуру дивизиона гражданской авиации и гибкость специализированного центра прибыли для достижения максимально эффективного ведения деятельности. </p>
+							<p class="hide" data-textshow="aboutText">Обладая мотивированной и профессиональной командой, РАпарт Сервисез формирует и постоянно совершенствует свою передовую транспортную и складскую инфраструктуру, обеспечивает разумно достаточную финансовую и материальную ресурсную базу, внедряет эффективные бизнес-процессы, развивает отношения с партнерской сетью, а также обеспечивает неукоснительное выполнение требований сертифицированной системы управления качеством таким образом, чтобы полностью удовлетворять требования своих заказчиков, как по скорости поставки запасных частей и услуг по МТО, их качеству, так и по цене.</p>
+							<div class="about__more js-link-text-hide" data-textshow="aboutText">Показать больше
+								<svg class="icon-arrow-right-long">
+									<use xlink:href="img/sprite.svg#arrow-right-long"></use>
+								</svg>
+							</div>
+						</div>
 						<div class="about__items"> 
-							<div class="row"> 
-								<div class="col-6">
+							<div class="row gy-2">
+								<div class="col-md-6">
 									<div class="about__item"> 
 										<svg class="icon-star">
 											<use xlink:href="img/sprite.svg#star"></use>
 										</svg>Работаем с 01 октября 2018 года
 									</div>
 								</div>
-								<div class="col-6">
+								<div class="col-md-6">
 									<div class="about__item"> 
 										<svg class="icon-star">
 											<use xlink:href="img/sprite.svg#star"></use>
@@ -288,50 +302,48 @@
 						<h2 class="subtitle subtitle--uppercase">Наши партнеры</h2>
 						<div class="partners__items"> 
 							<div class="row g-0">
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-1.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-2.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-3.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-4.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-5.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-6.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-7.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-8.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-9.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-10.jpg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-11.png" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-12.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-13.svg" alt=""></div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-4 col-6">
 									<div class="partners__item"> <img src="img/partners/img-14.png" alt=""></div>
 								</div>
-								<div class="col-lg-3"></div>
-								<div class="col-lg-3"></div>
 							</div>
 						</div>
 					</div>

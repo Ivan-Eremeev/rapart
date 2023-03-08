@@ -2,7 +2,9 @@ mixin page-head(title)
   // page-head
   .page-head
     .page-head__img 
-      img(src="img/page-head-bg.jpg", alt="")
+      picture 
+        source(media="(max-width: 575px)", srcset="img/page-head-bg-mobile.jpg")
+        img(src="img/page-head-bg.jpg", alt="")
     .container 
       // breadcrumbs
       .breadcrumbs
