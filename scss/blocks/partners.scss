@@ -1,0 +1,31 @@
+/* partners */
+.partners { 
+  margin-bottom: 120px;
+  .subtitle {
+    margin-bottom: 35px;
+  }
+  &__items {
+    
+  }
+  .row {
+    > * {
+      &:not(:nth-child(4n)) {
+        border-right: 1px solid $border_color;
+      }
+      &:not(:nth-child(-n+4)) {
+        border-top: 1px solid $border_color;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    padding: 10px;
+    img {
+      max-height: 100%;
+    }
+  }
+}
+/* /partners */
