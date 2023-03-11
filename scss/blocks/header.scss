@@ -103,24 +103,22 @@
     }
   } 
   &__bottom {
-    padding: 14px 0;
+    padding: 17px 0;
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
   }
   &__logo {
     display: block;
     max-width: 150px;
-    padding: 4px 0;
     img {
       display: block;
     }
   }
   &__nav {
-    padding: 8px 0;
+
   }
   &__list {
     display: flex;
@@ -145,6 +143,22 @@
   }
   &__close {
     display: none;
+  }
+  @include media-breakpoint-down(xl) {
+    &__list {
+      margin-left: -30px;
+      li {
+        margin-left: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__list {
+      margin-left: -25px;
+      li {
+        margin-left: 25px;
+      }
+    }
   }
   @include media-breakpoint-down(md) {
     &__top {

@@ -5,7 +5,6 @@
   &__top {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     margin-bottom: 40px;
   }
   &__logo {
@@ -57,6 +56,29 @@
       &:hover {
         color: $text_color;
         border-color: $text_color;
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__list {
+      margin-left: -30px;
+      li {
+        margin-left: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__top {
+      flex-wrap: wrap;
+    }
+    &__nav {
+      width: 100%;
+      margin-top: 20px;
+    }
+    &__list {
+      margin-left: -25px;
+      li {
+        margin-left: 25px;
       }
     }
   }

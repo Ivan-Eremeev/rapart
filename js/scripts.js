@@ -95,6 +95,7 @@ window.onload = function () {
   //   // }
   // }
 
+  // Swiper | Слайдер "сотрудники"
   if ($('.js-sliderStaff').length) {
 
     let sliderStaff;
@@ -105,6 +106,7 @@ window.onload = function () {
         sliderStaff = new Swiper('.js-sliderStaff', {
           slidesPerView: 1.2,
           spaceBetween: 30,
+          speed: 1000,
           pagination: false,
           navigation: false,
           breakpoints: {
@@ -127,10 +129,12 @@ window.onload = function () {
 
   }
 
+  // Swiper | Слайдер "галерея"
   if ($('#sliderGallery').length) {
     const sliderGallery = new Swiper('#sliderGallery', {
       slidesPerView: 1,
       spaceBetween: 30,
+      speed: 1000,
       pagination: {
         el: '.sliderGallery__pagination',
         clickable: true,
@@ -142,18 +146,19 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "сертифиикаты"
   if ($('#sliderSertificates').length) {
 
-    let sliderStaff;
+    let sliderSertificates;
     let init = false;
     function sliderToggle() {
       if ($(window).width() <= 1024 && !init) {
         init = true;
-        sliderStaff = new Swiper('#sliderSertificates', {
+        sliderSertificates = new Swiper('#sliderSertificates', {
           slidesPerView: 2.3,
           spaceBetween: 30,
-          pagination: false,
           navigation: false,
+          speed: 1000,
           pagination: {
             el: '.sliderSertificates__pagination',
             clickable: true,
@@ -166,7 +171,68 @@ window.onload = function () {
         });
       } else if ($(window).width() > 1024 && init) {
         init = false;
-        sliderStaff.destroy();
+        sliderSertificates.destroy();
+      }
+    };
+    sliderToggle();
+    $(window).resize(function () {
+      sliderToggle();
+    });
+
+  }
+
+  // Swiper | Слайдер в статье
+  if ($('#sliderPost').length) {
+    const sliderPost = new Swiper('#sliderPost', {
+      slidesPerView: 1.1,
+      spaceBetween: 10,
+      speed: 1000,
+      autoHeight: true,
+      pagination: {
+        el: '.post__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.post__slider-btn--next',
+        prevEl: '.post__slider-btn--prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+      }
+    });
+  }
+
+  // Swiper | Слайдер "другие события"
+  if ($('#sliderMoreNews').length) {
+
+    let sliderMoreNews;
+    let init = false;
+    function sliderToggle() {
+      if ($(window).width() <= 1024 && !init) {
+        init = true;
+        sliderMoreNews = new Swiper('#sliderMoreNews', {
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+          pagination: false,
+          navigation: false,
+          speed: 1000,
+          breakpoints: {
+            576: {
+              slidesPerView: 1.5,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+          }
+        });
+      } else if ($(window).width() > 1024 && init) {
+        init = false;
+        sliderMoreNews.destroy();
       }
     };
     sliderToggle();
