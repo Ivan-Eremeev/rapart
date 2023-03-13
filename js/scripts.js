@@ -513,4 +513,51 @@ window.onload = function () {
   }
   textShow();
 
+  // Фильтр поиска
+  function filterSearch() {
+    let input = $('.sort__search input');
+    let drop = $('.sort__search-drop');
+    let li = drop.find('li');
+    input.on('focus', function () {
+      drop.addClass('open');
+    });
+    $(document).mouseup(function (e) {
+      if (!input.is(e.target)
+        && input.has(e.target).length === 0
+        && !drop.is(e.target)
+        && drop.has(e.target).length === 0) {
+        drop.removeClass('open');
+      }
+    });
+    li.on('click', function () {
+      input.val($(this).text());
+      drop.removeClass('open');
+    });
+    input.on("keyup", function () {
+      var value = $(this).val().toUpperCase();
+      li.filter(function () {
+        $(this).toggle($(this).text().toUpperCase().indexOf(value) > -1)
+      });
+    });
+  }
+  filterSearch();
+
+  // Смена положения блока при изменении ширины окна
+	// function(блок, куда переместить, куда вернуть)
+	function replace(block, to, from, mediaBreak) {
+		function replaceToggle() {
+			if ($(window).width() <= mediaBreak) { // условие на ширину окна
+				block.appendTo(to); // Переместить блок
+			} else {
+				block.appendTo(from); // Вернуть блок обратно
+			}
+		}
+		replaceToggle();
+		$(window).resize(function () {
+			replaceToggle();
+		})
+
+	}
+  replace($('#items'), $('#itemsTo'), $('#itemsFrom'), 1024);
+
 }

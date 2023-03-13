@@ -18,7 +18,7 @@ $container-max-widths: ( // Максимальная ширина контейн
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1220px
+  xxl: 1250px
 ) !default;
 $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
@@ -88,5 +88,7 @@ $border_color: #D9D9D9;
 @import 'blocks/pagination';
 @import 'blocks/post';
 @import 'blocks/more-news';
+@import 'blocks/sort';
+@import 'blocks/catalog';
 
 @import 'blocks/footer';
