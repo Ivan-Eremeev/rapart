@@ -1,0 +1,65 @@
+extends core/base.pug
+
+block title 
+  title Каталог без фото
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      include blocks/page-head.pug
+      +page-head('Каталог')
+
+      include blocks/sort.pug
+
+      // catalog
+      .catalog
+        .container 
+          .catalog__items 
+            .row.g-0
+              .col-lg-6 
+                mixin catalog-item(img, name, title, num, stock, price, addClass)
+                  .catalog__item.catalog__item--no-image 
+                    .catalog__content 
+                      .catalog__name= name
+                      .catalog__title
+                        a(href="#")= title
+                      .catalog__bottom 
+                        .catalog__num!= num 
+                        .catalog__stock(class= addClass)= stock
+                        .catalog__price= price
+                    .catalog__icon 
+                      svg(class="icon-exit")
+                        use(xlink:href="img/sprite.svg#exit")
+                +catalog-item('img/catalog/img-1.jpg', 'Компьютер T3CAS', '9005000-55102', 'Кол-во:  <span>44 шт</span>', 'Нет в наличии', 'от 200 000₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Болт', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Нет в наличии', 'По запросу ₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Шайба', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Нет в наличии', 'По запросу ₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Эмаль ЭП-140М цвет темно-красный...', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Развертка ручная цилиндрическая', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Фанера береза', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Розетка', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-2.jpg', 'Блок дополнительной топливной систе...', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'В наличии', '157 890₽', 'catalog__stock--in')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-3.jpg', 'Распределительное устройство переме...', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'В наличии', '157 890₽', 'catalog__stock--in')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Эмаль красная', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Грунтовка', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+              .col-lg-6 
+                +catalog-item('img/catalog/img-not.jpg', 'Лист холоднокатанный', '(2)-10-60-Хим.Пас-ОСТ 1 31162-80', 'Кол-во:  <span>по запросу</span>', 'Будет 22.02.23', '157 890₽', 'catalog__stock--not')
+      // /catalog
+
+      include blocks/pagination.pug
+
+    include core/footer.pug

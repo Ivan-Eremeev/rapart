@@ -8567,6 +8567,23 @@ body.lock {
   border-bottom: 1px solid #D9D9D9;
   position: relative;
 }
+.catalog__item--no-image .catalog__name {
+  padding-right: 35px;
+}
+.catalog__item--no-image .catalog__num {
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+.catalog__item--no-image .catalog__stock {
+  margin-right: auto;
+}
+.catalog__item--no-image .catalog__bottom {
+  padding-right: 0;
+}
+.catalog__item--no-image .catalog__icon {
+  bottom: auto;
+  top: 24px;
+}
 .catalog__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8732,8 +8749,20 @@ body.lock {
     padding: 12px 0;
     border-right: none;
   }
+  .catalog__item--no-image .catalog__name {
+    padding-right: 0;
+  }
+  .catalog__bottom {
+    padding-right: 0;
+  }
 }
 @media (max-width: 575.98px) {
+  .catalog__item--no-image .catalog__name {
+    padding-right: 0;
+  }
+  .catalog__item--no-image .catalog__num {
+    margin-right: 22px;
+  }
   .catalog__img {
     width: 65px;
     height: 57px;
