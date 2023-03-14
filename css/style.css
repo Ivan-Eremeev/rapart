@@ -9342,6 +9342,62 @@ body.lock {
 }
 
 /* /product */
+/* contact */
+.contact {
+  margin-bottom: 120px;
+}
+.contact__item {
+  margin-bottom: 50px;
+}
+.contact__map-btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 769px) {
+  .contact__map-btn:hover .contact__text {
+    color: #4163BC;
+  }
+}
+.contact__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #4163BC;
+  margin-bottom: 30px;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.contact__text {
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.contact__link a {
+  font-weight: 500;
+  color: #151519;
+}
+@media (min-width: 769px) {
+  .contact__link a:hover {
+    color: #4163BC;
+  }
+}
+.contact__tel {
+  font-weight: 700;
+  font-size: 20px;
+}
+.contact__tel a {
+  color: #4163BC;
+}
+@media (min-width: 769px) {
+  .contact__tel a:hover {
+    color: #002D76;
+  }
+}
+
+/* /contact */
 /* footer */
 .footer {
   padding: 70px 0;
