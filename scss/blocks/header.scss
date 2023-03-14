@@ -103,7 +103,9 @@
     }
   } 
   &__bottom {
-    padding: 17px 0;
+    height: 88px;
+    // padding: 17px 0;
+    position: relative;
     .container {
       display: flex;
       align-items: center;
@@ -165,7 +167,8 @@
       padding: 5px 0;
     }
     &__bottom {
-      padding: 8px 0;
+      height: 62px;
+      // padding: 8px 0;
     }
     &__links {
       font-size: 14px;
@@ -264,12 +267,25 @@
 
 // stiky menu
 #headerSticky {
+  padding: 17px 0;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
   &.sticky {
+    padding: 8px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     animation: showStyky 0.5s;
+    z-index: 8;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 8px 0;
   }
 }
 @keyframes showStyky {

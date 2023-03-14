@@ -1,21 +1,21 @@
 window.onload = function () {
 
-  // // Липкое меню.
-  // function stikyMenu(header) {
-  //   let headerTop = header.offset().top;
-  //   headerToggleClass();
-  //   $(window).scroll(function () {
-  //     headerToggleClass();
-  //   });
-  //   function headerToggleClass() {
-  //     if ($(window).scrollTop() > headerTop + 130) {
-  //       header.addClass('sticky');
-  //     } else if ($(window).scrollTop() <= headerTop) {
-  //       header.removeClass('sticky');
-  //     }
-  //   }
-  // };
-  // stikyMenu($('#headerSticky'));
+  // Липкое меню.
+  function stikyMenu(header) {
+    let headerTop = header.offset().top;
+    headerToggleClass();
+    $(window).scroll(function () {
+      headerToggleClass();
+    });
+    function headerToggleClass() {
+      if ($(window).scrollTop() > headerTop + 130) {
+        header.addClass('sticky');
+      } else if ($(window).scrollTop() <= headerTop) {
+        header.removeClass('sticky');
+      }
+    }
+  };
+  stikyMenu($('#headerSticky'));
 
   // // Swiper | Слайдер
   // if ($('#swiper').length) {
