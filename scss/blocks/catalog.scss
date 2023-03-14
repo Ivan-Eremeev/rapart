@@ -145,8 +145,10 @@
       width: 20px;
       height: 20px;
     }
-    &:hover {
-      fill: $grayText_color;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        fill: $grayText_color;
+      }
     }
   }
   @include media-breakpoint-down(xl) {
@@ -197,6 +199,7 @@
     &__title {
       font-size: 16px;
       line-height: 1.4;
+      white-space: normal;
     }
     &__num {
       font-size: 12px;

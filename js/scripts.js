@@ -560,4 +560,27 @@ window.onload = function () {
 	}
   replace($('#items'), $('#itemsTo'), $('#itemsFrom'), 1024);
 
+  // Оборачивание инфы в каталоге списком на мобилке
+  function wrapTextItemMobile() {
+    let init = false;
+    toggleWrap()
+    $(window).resize(toggleWrap);
+    function toggleWrap() {
+      $('.catalog-list__item').each(function () {
+        let itemCurrent = $(this);
+        let content = itemCurrent.find('.catalog-list__content');
+        let wrapper = $('<div class="catalog-list__content-wrapper"></div>')
+        if ($(window).width() < 576 && !itemCurrent.hasClass('item-mobile')) {
+          content.wrapAll(wrapper);
+          itemCurrent.addClass('item-mobile');
+        }
+        else if ($(window).width() >= 576 && itemCurrent.hasClass('item-mobile')) {
+          content.unwrap(wrapper);
+          itemCurrent.removeClass('item-mobile');
+        }
+      })
+    }
+  }
+  wrapTextItemMobile();
+
 }
