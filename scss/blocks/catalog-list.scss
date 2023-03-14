@@ -212,6 +212,12 @@
       &:last-child {
         border-bottom: 1px solid $border_color;
       }
+      &--no-image {
+        .catalog-list__num {
+          width: auto;
+          margin-right: 22px;
+        }
+      }
     }
     &__img {
       margin-right: 20px;
@@ -246,7 +252,7 @@
     }
     &__stock {
       order: 4;
-      margin-right: 33px;
+      margin-right: 25px;
       font-size: 12px;
       line-height: 1.4;
       span {
@@ -259,6 +265,7 @@
       order: 5;
       font-size: 14px;
       line-height: 1.4;
+      margin-left: auto;
     }
   }
 }
