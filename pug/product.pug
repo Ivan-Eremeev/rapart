@@ -26,15 +26,16 @@ block content
                 span Компьютер T3CAS 
           // /breadcrumbs
 
-          .product__row 
+          form(action="#").product__row 
             .product__img 
               img(src="img/catalog/img-1.jpg", alt="")
             .product__content 
               h1.title 9005000-55102
               .product__name Компьютер T3CAS
               .product__properties 
-                .product__num Кол-во:  44 шт
-                .product__stock Нет в наличии
+                .product__num Кол-во: 
+                  span 44 шт
+                .product__stock.product__stock--not Нет в наличии
                 .product__price от 200 000₽
               .product__btn 
                 button(type="submit").btn В личный кабинет

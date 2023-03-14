@@ -158,6 +158,7 @@
     }
   }
   @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
     &__items {
       border: none;
     }

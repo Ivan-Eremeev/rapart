@@ -184,6 +184,7 @@
     }
   }
   @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
     &__icon {
       display: none;
     }
