@@ -1,0 +1,107 @@
+/* servises-page */
+.services-page { 
+  margin-bottom: 90px;
+  &__item {
+    margin-bottom: 120px;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    height: 280px;
+    padding: 40px 70px;
+    border-radius: 0 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 70px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .subtitle {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+  }
+  &__lists {
+    overflow: hidden;
+    .row {
+      margin-left: -40px;
+      margin-right: -40px;
+      > * {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+  &__list {
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin: 30px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '';
+        display: block;
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        margin-top: 7px;
+        margin-right: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.63597 15.306L8.63997 11.652L13.68 15.306L11.718 9.58196L16.362 6.46796H10.71L8.63997 0.329956L6.60597 6.46796H0.917969L5.56197 9.58196L3.63597 15.306Z' fill='%231550A2'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }  
+    &--no-gutter {
+      li {
+        margin: 0;
+      }
+    }
+  }
+  &__text {
+
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    &__item {
+      margin-bottom: 0;
+    }
+    &__img {
+      height: 130px;
+      margin-bottom: 20px;
+    }
+    &__lists {
+      .row {
+        > * {
+          padding-bottom: 20px;
+        }
+      }
+    }
+    &__list {
+      font-size: 16px;
+      li {
+        margin: 18px 0;
+        &:before {
+          width: 14px;
+          height: 14px;
+          margin-top: 8px;
+          margin-right: 5px;
+        }
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+/* /servises-page */

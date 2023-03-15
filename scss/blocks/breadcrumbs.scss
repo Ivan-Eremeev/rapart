@@ -1,0 +1,51 @@
+/* breadcrumbs */
+.breadcrumbs { 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      &:not(:last-child) {
+        padding-right: 10px;
+        margin-right: 10px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.10788 3.60998V4.27598L0.150879 7.89398V6.74198C0.150879 6.64598 0.174879 6.55898 0.222879 6.48098C0.270879 6.40298 0.354879 6.33398 0.474879 6.27398L4.51588 4.23098C4.63588 4.16498 4.76188 4.11098 4.89388 4.06898C5.02588 4.02098 5.16688 3.97898 5.31688 3.94298C5.00488 3.87698 4.73788 3.78398 4.51588 3.66398L0.474879 1.61198C0.354879 1.55198 0.270879 1.48598 0.222879 1.41398C0.174879 1.33598 0.150879 1.24598 0.150879 1.14398V0.000976562L7.10788 3.60998Z' fill='%23151519'/%3E%3C/svg%3E%0A");
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 13px;
+          right: -4px;
+        }
+      }
+      a {
+        font-weight: 300;
+        color: $grayText_color;
+        &:hover {
+          color: $primary_color;
+        }
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+    ul {
+      li {
+        &:not(:last-child) {
+          padding-right: 15px;
+          margin-right: 15px;
+          &:after {
+            top: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+/* /breadcrumbs */

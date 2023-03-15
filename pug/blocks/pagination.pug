@@ -1,0 +1,25 @@
+// pagination
+.pagination
+  .container 
+    a(href="#").pagination__arrow.pagination__arrow--prev 
+      svg(class="icon-arrow-down")
+        use(xlink:href="img/sprite.svg#arrow-down")
+    ul.pagination__list 
+      li 
+        a(href="#") 1
+      li 
+        a(href="#") 2
+      li 
+        a(href="#").active 3
+      li.d-sm-flex.d-none
+        a(href="#") 4
+      li.d-sm-flex.d-none
+        a(href="#") 5
+      li 
+        span ...
+      li 
+        a(href="#") 12
+    a(href="#").pagination__arrow.pagination__arrow--next 
+      svg(class="icon-arrow-down")
+        use(xlink:href="img/sprite.svg#arrow-down")
+// /pagination

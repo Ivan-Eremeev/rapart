@@ -1,0 +1,64 @@
+// sort
+form(action="#").sort
+  .container 
+    .sort__block 
+      .sort__search 
+        input(type="text")
+        svg(class="icon-search")
+          use(xlink:href="img/sprite.svg#search")
+        ul.sort__search-drop 
+          li 0,2-16-28-ХИМ.ПАС-ОСТ 1 34508-80
+          li (2)-10-60-Хим.Пас-ОСТ 1 31162-80
+          li Лист холоднокатанный
+          li Эмаль ЭП-140М цвет темно-красн...
+          li Болт
+          li 0,2-16-28-ХИМ.ПАС-ОСТ 1 34508-80
+          li (2)-10-60-Хим.Пас-ОСТ 1 31162-80
+          li Лист холоднокатанный
+          li Эмаль ЭП-140М цвет темно-красн...
+          li Болт
+      #itemsTo
+    .sort__controll 
+      #itemsFrom
+        .sort__items#items
+          .sort__item 
+            input#sortCount_less(type="radio" name="sortCount")
+            label(for="sortCount_less") 
+              svg(class="icon-pyramid")
+                use(xlink:href="img/sprite.svg#pyramid")
+              span По убыванию
+          .sort__item 
+            input#sortCount_more(type="radio" name="sortCount")
+            label(for="sortCount_more") 
+              svg(class="icon-pyramid")
+                use(xlink:href="img/sprite.svg#pyramid")
+              span По возрастанию
+      .sort__checkbox 
+        input#inStock(type="checkbox")
+        label(for="inStock")
+          span.sort__checkbox-circle
+          span.d-none.d-sm-inline Только в наличии
+          span.d-inline.d-sm-none В наличии
+      .sort__count
+        .sort__count-title Количество: 
+        .sort__count-item 
+          input#count_30(type="radio" name="count" checked)
+          label(for="count_30") 30
+        .sort__count-item 
+          input#count_50(type="radio" name="count")
+          label(for="count_50") 50
+        .sort__count-item 
+          input#count_100(type="radio" name="count")
+          label(for="count_100") 100
+      .sort__view 
+        .sort__view-icon 
+          input#view_list(type="radio" name="view")
+          label(for="view_list") 
+            svg(class="icon-list-2")
+              use(xlink:href="img/sprite.svg#list-2")
+        .sort__view-icon 
+          input#view_tile(type="radio" name="view" checked)
+          label(for="view_tile") 
+            svg(class="icon-tile")
+              use(xlink:href="img/sprite.svg#tile")
+// /sort

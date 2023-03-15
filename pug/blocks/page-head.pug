@@ -1,0 +1,18 @@
+mixin page-head(title)
+  // page-head
+  .page-head
+    .page-head__img 
+      picture 
+        source(media="(max-width: 575px)", srcset="img/page-head-bg-mobile.jpg")
+        img(src="img/page-head-bg.jpg", alt="")
+    .container 
+      // breadcrumbs
+      .breadcrumbs
+        ul 
+          li 
+            a(href="#") Главная
+          li 
+            span= title 
+      // /breadcrumbs
+      h1.title= title
+  // /page-head

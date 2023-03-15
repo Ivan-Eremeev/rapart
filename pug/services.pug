@@ -1,0 +1,97 @@
+extends core/base.pug
+
+block title 
+  title Сервисы
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      include blocks/page-head.pug
+      +page-head('Сервисы')
+
+      // services-page
+      .services-page
+        .container 
+
+          .services-page__item 
+            .services-page__img 
+              img(src="img//services/img-1-long.jpg ", alt="")
+              h2.subtitle.subtitle--uppercase Пул
+            .services-page__lists 
+              .row 
+                .col-md-6 
+                  ul.services-page__list 
+                    li Режим работы 24/7/365
+                    li Расположение нашего офиса и склада в непосредственной близости к аэропорту Шереметьево
+                    li Огромный выбор АТИ в наличии
+                .col-md-6 
+                  ul.services-page__list 
+                    li Налаженные связи с крупнейшими логистическими операторами
+                    li Собственная логистическая служба позволяет нам осуществлять поставки нужных Вам компонентов в AOG-ситуациях, когда на счету каждая минута
+
+          .services-page__item 
+            .services-page__img 
+              img(src="img//services/img-2-long.jpg ", alt="")
+              h2.subtitle.subtitle--uppercase Поставка
+            .services-page__lists 
+              .row 
+                .col-md-6 
+                  ul.services-page__list 
+                    li Режим работы 24/7/365
+                    li Расположение нашего офиса и склада в непосредственной близости к аэропорту Шереметьево
+                    li Огромный выбор АТИ в наличии
+                .col-md-6 
+                  ul.services-page__list 
+                    li Налаженные связи с крупнейшими логистическими операторами
+                    li Собственная логистическая служба позволяет нам осуществлять поставки нужных Вам компонентов в AOG-ситуациях, когда на счету каждая минута
+
+          .services-page__item 
+            .services-page__img 
+              img(src="img//services/img-3-long.jpg ", alt="")
+              h2.subtitle.subtitle--uppercase Ремонт
+            .services-page__lists 
+              .row
+                .col-md-6 
+                  .services-page__text 
+                    p Прямые контракты с ОЕМ и ведущими организациями по ТОиР компонентов - гарантия высокого качества и минимальные сроки осуществления ремонта, возможность предоставления компонентов в аренду на период ремонта. Гибкие финансовые условия
+                .col-md-6 
+                  .services-page__text 
+                    p Наши партнеры:
+                    p Thales, Safran, Meggit, Liebherr Aerospace, B/E Aerospace, Collins Aerospace, Goodrich, Honeywell, Zodiac, Teledyne Technologies, УКБП, ИАСЦ
+
+          .services-page__item 
+            .services-page__img 
+              img(src="img//services/img-4-long.jpg ", alt="")
+              h2.subtitle.subtitle--uppercase Обмен
+            .services-page__lists 
+              .row 
+                .col-md-6 
+                  .services-page__text 
+                    p Всегда в наличии на складе в Москве большой выбор авиакомпонентов, предлагаемых на обмен на условиях standard exchange*
+                .col-md-6 
+                  ul.services-page__list.services-page__list--no-gutter 
+                    li Высокая скорость обмена
+                    li Exchange fee от 5%
+                    li Гибкие финансовые условия
+
+          .services-page__item 
+            .services-page__img 
+              img(src="img//services/img-5-long.jpg ", alt="")
+              h2.subtitle.subtitle--uppercase Аренда
+            .services-page__lists 
+              .row 
+                .col-md-6 
+                  .services-page__text 
+                    p Аренда более чем 400 авиакомпонентов со склада в Шереметьево*
+                .col-md-6 
+                  ul.services-page__list.services-page__list--no-gutter 
+                    li Ставки аренды от 0,2% в сутки
+                    li Возможность выкупа в процессе аренды
+                    li Передача в аренду в ситуации AOG
+      // /services-page
+
+    include core/footer.pug

@@ -1,0 +1,48 @@
+extends core/base.pug
+
+block title 
+  title Страница товара
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // product
+      .product
+        .container 
+
+          // breadcrumbs
+          .breadcrumbs
+            ul 
+              li 
+                a(href="#") Главная
+              li 
+                a(href="#") Каталог
+              li 
+                span Компьютер T3CAS 
+          // /breadcrumbs
+
+          form(action="#").product__row 
+            .product__img 
+              img(src="img/catalog/img-1.jpg", alt="")
+            .product__content 
+              h1.title 9005000-55102
+              .product__name Компьютер T3CAS
+              .product__properties 
+                .product__num Кол-во: 
+                  span 44 шт
+                .product__stock.product__stock--not Нет в наличии
+                .product__price от 200 000₽
+              .product__btn 
+                button(type="submit").btn В личный кабинет
+              .product__text 
+                p TAWS-система от компании ACSS может обеспечить функции предупреждения, базирующиеся на специфических функциональных возможностях воздушного судна.
+                p TAWS-система может быть применена на любом воздушном транспортном судне регионального назначения, бизнес-самолетах или на военных самолетах для обеспечения избежания несчастных случаев от столкновения воздушного судна с землей в контролируемом полете (CFIT), предоставляя операторам достаточный запас времени для проведения безопасного разворота с целью обеспечения маневрирования и избежания столкновения.
+                p При обнаружении системой опасного для движения рельефа местности, система генерирует сигнал предупреждения "Выполнить уклонение от наземного объекта (Avoid Terrain)".
+      // /product
+
+    include core/footer.pug

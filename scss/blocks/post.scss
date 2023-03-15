@@ -1,0 +1,143 @@
+/* post */
+.post { 
+  padding-top: 40px;
+  margin-bottom: 60px;
+  .breadcrumbs {
+    margin-bottom: 40px;
+  }
+  &__date {
+    font-size: 16px;
+    color: $grayText_color;
+    margin-bottom: 10px;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  &__slider {
+    max-width: 906px;
+
+    margin-bottom: 35px;
+    position: relative;
+    #sliderPost {
+      border-radius: 0 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .swiper-slide {
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 0 10px;
+      }
+    }
+  }
+  &__pagination {
+    display: none;
+  }
+  &__slider-controll {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
+  }
+  &__slider-btn {
+    width: 34px;
+    height: 34px;
+    margin-right: 6px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin-top: 0;
+    position: static;
+    fill: $border_color;
+    transition: 0.1s;
+    &:after {
+      display: none;
+    }
+    svg {
+      width: 10px;
+      height: 19px;
+    }
+    &--prev {
+      transform: rotate(180deg);
+    }
+    &--next {
+
+    }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        fill: $primary_color;
+      }
+    }
+  }
+  &__text {
+    max-width: 906px;
+    margin-bottom: 60px;
+    p {
+      margin: 30px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    b {
+      font-weight: bold;
+    }
+  }
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $border_color;
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 25px;
+    padding-top: 15px;
+    .breadcrumbs {
+      display: none;
+    }
+    &__date {
+      font-size: 14px;
+    }
+    .title {
+      margin-bottom: 15px;
+    }
+    overflow: hidden;
+    &__slider {
+      padding-bottom: 30px;
+      margin-bottom: 15px;
+      #sliderPost {
+        overflow: visible;
+      }
+      .swiper-slide {
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+    &__slider-controll {
+      display: none;
+    }
+    &__pagination {
+      display: block;
+      bottom: 0 !important;
+      .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        margin: 0 6px !important;
+        background-color: $border_color;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $primary_color;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 167.5%;
+      margin-bottom: 20px;
+    }
+  }
+}
+/* /post */

@@ -1,0 +1,62 @@
+// header
+header.header
+  .header__top 
+    .container 
+      .header__links 
+        a(href="#") +7(495)798-75-44
+        a(href="#").d-md-inline.d-none info@rapart.aero
+      .header__user-block 
+        a(href="#").header__user-icon 
+          svg(class="icon-man")
+            use(xlink:href="img/sprite.svg#man")
+        .header__lang 
+          .header__lang-head.js-drop-btn(data-drop="langMenu") RUS
+            svg(class="icon-arrow-down")
+              use(xlink:href="img/sprite.svg#arrow-down")
+          .header__lang-drop#langMenu 
+            ul.header__drop-list 
+              li 
+                a(href="#") En
+              li 
+                a(href="#") GER 
+              li 
+                a(href="#") ITA
+              li 
+                a(href="#") FR
+  .header__bottom
+    #headerSticky
+      .container 
+        a.header__logo(href="#") 
+          img(src="img/logo.svg", alt="")
+        .hamburger.hamburger--squeeze.js-drop-menu(data-drop="menuMobile")
+          .hamburger-box
+            .hamburger-inner
+        nav.header__nav#menuMobile 
+          .header__close.js-drop-close(data-drop="menuMobile")
+          ul.header__list 
+            li 
+              a(href="#") О компании
+            li 
+              a(href="#") Каталог
+            li 
+              a(href="#") Серверы
+            li 
+              a(href="#") Новости
+            li 
+              a(href="#") Контакты
+          .header__lang-mobile.d-block.d-md-none
+            .header__lang-mobile-item RUS
+              svg(class="icon-arrow-down")
+                use(xlink:href="img/sprite.svg#arrow-down")
+            .header__lang-mobile-drop 
+              ul.header__lang-mobile-list 
+                li 
+                  a(href="#") En
+                li 
+                  a(href="#") GER 
+                li 
+                  a(href="#") ITA
+                li 
+                  a(href="#") FR
+          a(href="#").header__link.d-block.d-md-none Личный кабинет
+//	/header

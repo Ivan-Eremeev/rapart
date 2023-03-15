@@ -1,0 +1,41 @@
+extends core/base.pug
+
+block title 
+  title Навигаця по страницам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      .navpage 
+        .container
+          h1 Навигаця по страницам
+          ul 
+            li 
+              a(href="home.html") Главная
+            li 
+              a(href="about.html") О компании
+            li 
+              a(href="services.html") Сервисы
+            li 
+              a(href="news.html") Новости
+            li 
+              a(href="post.html") Статья
+            li 
+              a(href="catalog.html") Каталог
+            li 
+              a(href="catalog-noimage.html") Каталог без фото
+            li 
+              a(href="catalog-list.html") Каталог список
+            li 
+              a(href="catalog-list-noimage.html") Каталог список без фото
+            li 
+              a(href="product.html") Страница товара
+            li 
+              a(href="contact.html") Контакты
+
+    include core/footer.pug

@@ -1,0 +1,333 @@
+/* header */
+.header { 
+  &__top {
+    padding: 14px 0;
+    border-bottom: 1px solid $border_color;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  &__links {
+    margin-left: -45px;
+    a {
+      margin-left: 45px;
+      color: $primary_color;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: $primaryHov_color;
+        }
+      }
+    }
+  } 
+  &__user-block {
+    display: flex;
+    align-items: center;
+  }
+  &__user-icon {
+    margin-right: 25px;
+    flex-shrink: 0;
+    fill: $grayText_color;
+    svg {
+      display: block;
+      width: 12px;
+      height: 17px;
+    }
+    &:hover {
+      fill: $primary_color;
+    }
+  }
+  &__lang {
+    display: inline-block;
+    position: relative;
+  }
+  &__lang-head {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: $grayText_color;
+    fill: $grayText_color;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+    svg {
+      width: 13px;
+      height: 8px;
+      margin-left: 7px;
+      transition: 0.1s;
+    }
+    @include media-breakpoint-up(md) {
+      &:hover, &.is-active {
+        color: $primary_color;
+        fill: $primary_color;
+      }
+    }
+  }
+  &__lang-drop {
+    padding-top: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 10px);
+    transition: 0.3s;
+    z-index: 5;
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  &__drop-list {
+    padding: 14px 40px 14px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -1px 10px 22px rgba(63, 63, 63, 0.06);
+    font-weight: 400;
+    font-size: 16px;
+    li {
+      a {
+        display: block;
+        color: $text_color;
+        line-height: 2;
+        @include media-breakpoint-up(md) {
+          &:hover {
+            color: $primary_color;
+          }
+        }
+      }
+    }
+  } 
+  &__bottom {
+    height: 88px;
+    // padding: 17px 0;
+    position: relative;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    display: block;
+    max-width: 150px;
+    img {
+      display: block;
+    }
+  }
+  &__nav {
+
+  }
+  &__list {
+    display: flex;
+    margin-top: -10px;
+    margin-left: -45px;
+    li {
+      margin-top: 10px;
+      margin-left: 45px;
+      a {
+        color: $text_color;
+        white-space: nowrap;
+        @include media-breakpoint-up(md) {
+          &:hover {
+            color: $primary_color;
+          }
+        }
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+  &__close {
+    display: none;
+  }
+  @include media-breakpoint-down(xl) {
+    &__list {
+      margin-left: -30px;
+      li {
+        margin-left: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__list {
+      margin-left: -25px;
+      li {
+        margin-left: 25px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__top {
+      padding: 5px 0;
+    }
+    &__bottom {
+      height: 62px;
+      // padding: 8px 0;
+    }
+    &__links {
+      font-size: 14px;
+    }
+    &__lang-head {
+      font-size: 14px;
+      line-height: 1;
+      svg {
+        width: 7px;
+        height: 5px;
+      }
+    }
+    &__drop-list {
+      font-size: 20px;
+    }
+    &__user-icon {
+      width: 10px;
+      height: 14px;
+      margin-right: 15px;
+      margin-top: -4px;
+    }
+    &__logo {
+      max-width: 104px;
+    }
+    .hamburger {
+      display: block;
+      padding-right: 0;
+      &-box {
+        display: block;
+      }
+    }
+    &__nav {
+      width: 100%;
+      max-width: 400px;
+      padding: 70px 30px 40px;
+      background-color: $primary_color;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -800px;
+      transition: 0.5s;
+      z-index: 10;
+      overflow-y: auto;
+      &.open {
+        left: 0;
+      }
+    }
+    &__list {
+      display: block;
+      margin-left: 0;
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 24px;
+      li {
+        margin: 0;
+        a {
+          padding: 12px 0;
+          display: block;
+          color: #fff;
+        }
+      }
+    }
+    &__link {
+      padding: 12px 0;
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+    }
+    &__lang-mobile {
+      margin: 40px 0;
+    }
+    &__lang-mobile-item {
+      padding: 12px 0;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      fill: #fff;
+      margin-bottom: 10px;
+      svg {
+        width: 11px;
+        height: 7px;
+      }
+    }
+    &__lang-mobile-drop {
+      display: none;
+    }
+    &__lang-mobile-list {
+      font-size: 24px;
+      li {
+        a {
+          display: block;
+          padding: 12px 0;
+          color: #fff;
+        }
+      } 
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__close {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      &:after,&:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &:after {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+      &:before {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+    }
+    &__nav {
+      max-width: none;
+    }
+  }
+}
+
+// stiky menu
+#headerSticky {
+  padding: 17px 0;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  &.sticky {
+    padding: 8px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: showStyky 0.5s;
+    z-index: 8;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 8px 0;
+  }
+}
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+/* /header */

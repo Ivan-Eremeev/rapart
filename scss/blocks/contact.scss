@@ -1,0 +1,52 @@
+/* contact */
+.contact { 
+  margin-bottom: 120px;
+  &__item {
+    margin-bottom: 50px;
+  }
+  &__map-btn {
+    cursor: pointer;
+    user-select: none;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        .contact__text {
+          color: $primary_color;
+        }
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    color: $primary_color;
+    margin-bottom: 30px;
+    transition: 0.1s;
+  }
+  &__text {
+    transition: 0.1s;
+  }
+  &__link {
+    a {
+      font-weight: 500;
+      color: $text_color;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: $primary_color;
+        }
+      }
+    }
+  }
+  &__tel {
+    font-weight: 700;
+    font-size: 20px;
+    a {
+      color: $primary_color;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: $primaryHov_color;
+        }
+      }
+    }
+  }
+}
+/* /contact */

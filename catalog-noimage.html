@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="robots" content="noindex, nofollow">
+		<title>Каталог без фото</title>
+		<link rel="stylesheet" href="css/plugins/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body> 
+		<div class="page"> 
+			<!-- header-->
+			<header class="header">
+				<div class="header__top"> 
+					<div class="container"> 
+						<div class="header__links"> <a href="#">+7(495)798-75-44</a><a class="d-md-inline d-none" href="#">info@rapart.aero</a></div>
+						<div class="header__user-block"> <a class="header__user-icon" href="#"> 
+								<svg class="icon-man">
+									<use xlink:href="img/sprite.svg#man"></use>
+								</svg></a>
+							<div class="header__lang"> 
+								<div class="header__lang-head js-drop-btn" data-drop="langMenu">RUS
+									<svg class="icon-arrow-down">
+										<use xlink:href="img/sprite.svg#arrow-down"></use>
+									</svg>
+								</div>
+								<div class="header__lang-drop" id="langMenu"> 
+									<ul class="header__drop-list"> 
+										<li> <a href="#">En</a></li>
+										<li> <a href="#">GER </a></li>
+										<li> <a href="#">ITA</a></li>
+										<li> <a href="#">FR</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div id="headerSticky">
+						<div class="container"> <a class="header__logo" href="#"> <img src="img/logo.svg" alt=""></a>
+							<div class="hamburger hamburger--squeeze js-drop-menu" data-drop="menuMobile">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+							<nav class="header__nav" id="menuMobile"> 
+								<div class="header__close js-drop-close" data-drop="menuMobile"></div>
+								<ul class="header__list"> 
+									<li> <a href="#">О компании</a></li>
+									<li> <a href="#">Каталог</a></li>
+									<li> <a href="#">Серверы</a></li>
+									<li> <a href="#">Новости</a></li>
+									<li> <a href="#">Контакты</a></li>
+								</ul>
+								<div class="header__lang-mobile d-block d-md-none">
+									<div class="header__lang-mobile-item">RUS
+										<svg class="icon-arrow-down">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+									<div class="header__lang-mobile-drop"> 
+										<ul class="header__lang-mobile-list"> 
+											<li> <a href="#">En</a></li>
+											<li> <a href="#">GER </a></li>
+											<li> <a href="#">ITA</a></li>
+											<li> <a href="#">FR</a></li>
+										</ul>
+									</div>
+								</div><a class="header__link d-block d-md-none" href="#">Личный кабинет</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--	/header-->
+			<div class="content"> 
+								<!-- page-head-->
+								<div class="page-head">
+									<div class="page-head__img"> 
+										<picture> 
+											<source media="(max-width: 575px)" srcset="img/page-head-bg-mobile.jpg"><img src="img/page-head-bg.jpg" alt="">
+										</picture>
+									</div>
+									<div class="container"> 
+										<!-- breadcrumbs-->
+										<div class="breadcrumbs">
+											<ul> 
+												<li> <a href="#">Главная</a></li>
+												<li> <span>Каталог</span></li>
+											</ul>
+										</div>
+										<!-- /breadcrumbs-->
+										<h1 class="title">Каталог</h1>
+									</div>
+								</div>
+								<!-- /page-head-->
+				<!-- sort-->
+				<form class="sort" action="#">
+					<div class="container"> 
+						<div class="sort__block"> 
+							<div class="sort__search"> 
+								<input type="text">
+								<svg class="icon-search">
+									<use xlink:href="img/sprite.svg#search"></use>
+								</svg>
+								<ul class="sort__search-drop"> 
+									<li>0,2-16-28-ХИМ.ПАС-ОСТ 1 34508-80</li>
+									<li>(2)-10-60-Хим.Пас-ОСТ 1 31162-80</li>
+									<li>Лист холоднокатанный</li>
+									<li>Эмаль ЭП-140М цвет темно-красн...</li>
+									<li>Болт</li>
+									<li>0,2-16-28-ХИМ.ПАС-ОСТ 1 34508-80</li>
+									<li>(2)-10-60-Хим.Пас-ОСТ 1 31162-80</li>
+									<li>Лист холоднокатанный</li>
+									<li>Эмаль ЭП-140М цвет темно-красн...</li>
+									<li>Болт</li>
+								</ul>
+							</div>
+							<div id="itemsTo"></div>
+						</div>
+						<div class="sort__controll"> 
+							<div id="itemsFrom">
+								<div class="sort__items" id="items">
+									<div class="sort__item"> 
+										<input id="sortCount_less" type="radio" name="sortCount">
+										<label for="sortCount_less"> 
+											<svg class="icon-pyramid">
+												<use xlink:href="img/sprite.svg#pyramid"></use>
+											</svg><span>По убыванию</span>
+										</label>
+									</div>
+									<div class="sort__item"> 
+										<input id="sortCount_more" type="radio" name="sortCount">
+										<label for="sortCount_more"> 
+											<svg class="icon-pyramid">
+												<use xlink:href="img/sprite.svg#pyramid"></use>
+											</svg><span>По возрастанию</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="sort__checkbox"> 
+								<input id="inStock" type="checkbox">
+								<label for="inStock"><span class="sort__checkbox-circle"></span><span class="d-none d-sm-inline">Только в наличии</span><span class="d-inline d-sm-none">В наличии</span></label>
+							</div>
+							<div class="sort__count">
+								<div class="sort__count-title">Количество: </div>
+								<div class="sort__count-item"> 
+									<input id="count_30" type="radio" name="count" checked>
+									<label for="count_30">30</label>
+								</div>
+								<div class="sort__count-item"> 
+									<input id="count_50" type="radio" name="count">
+									<label for="count_50">50</label>
+								</div>
+								<div class="sort__count-item"> 
+									<input id="count_100" type="radio" name="count">
+									<label for="count_100">100</label>
+								</div>
+							</div>
+							<div class="sort__view"> 
+								<div class="sort__view-icon"> 
+									<input id="view_list" type="radio" name="view">
+									<label for="view_list"> 
+										<svg class="icon-list-2">
+											<use xlink:href="img/sprite.svg#list-2"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="sort__view-icon"> 
+									<input id="view_tile" type="radio" name="view" checked>
+									<label for="view_tile"> 
+										<svg class="icon-tile">
+											<use xlink:href="img/sprite.svg#tile"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- /sort-->
+				<!-- catalog-->
+				<div class="catalog">
+					<div class="container"> 
+						<div class="catalog__items"> 
+							<div class="row g-0">
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Компьютер T3CAS</div>
+																				<div class="catalog__title"><a href="#">9005000-55102</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>44 шт</span></div>
+																					<div class="catalog__stock catalog__stock--not">Нет в наличии</div>
+																					<div class="catalog__price">от 200 000₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Болт</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Нет в наличии</div>
+																					<div class="catalog__price">По запросу ₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Шайба</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Нет в наличии</div>
+																					<div class="catalog__price">По запросу ₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Эмаль ЭП-140М цвет темно-красный...</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Развертка ручная цилиндрическая</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Фанера береза</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Розетка</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Блок дополнительной топливной систе...</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--in">В наличии</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Распределительное устройство переме...</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--in">В наличии</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Эмаль красная</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Грунтовка</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+								<div class="col-lg-6"> 
+																		<div class="catalog__item catalog__item--no-image"> 
+																			<div class="catalog__content"> 
+																				<div class="catalog__name">Лист холоднокатанный</div>
+																				<div class="catalog__title"><a href="#">(2)-10-60-Хим.Пас-ОСТ 1 31162-80</a></div>
+																				<div class="catalog__bottom"> 
+																					<div class="catalog__num">Кол-во:  <span>по запросу</span></div>
+																					<div class="catalog__stock catalog__stock--not">Будет 22.02.23</div>
+																					<div class="catalog__price">157 890₽</div>
+																				</div>
+																			</div>
+																			<div class="catalog__icon"> 
+																				<svg class="icon-exit">
+																					<use xlink:href="img/sprite.svg#exit"></use>
+																				</svg>
+																			</div>
+																		</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /catalog-->
+				<!-- pagination-->
+				<div class="pagination">
+					<div class="container"> <a class="pagination__arrow pagination__arrow--prev" href="#"> 
+							<svg class="icon-arrow-down">
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
+							</svg></a>
+						<ul class="pagination__list"> 
+							<li> <a href="#">1</a></li>
+							<li> <a href="#">2</a></li>
+							<li> <a class="active" href="#">3</a></li>
+							<li class="d-sm-flex d-none"><a href="#">4</a></li>
+							<li class="d-sm-flex d-none"><a href="#">5</a></li>
+							<li> <span>...</span></li>
+							<li> <a href="#">12</a></li>
+						</ul><a class="pagination__arrow pagination__arrow--next" href="#"> 
+							<svg class="icon-arrow-down">
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
+							</svg></a>
+					</div>
+				</div>
+				<!-- /pagination-->
+			</div>
+			<!-- footer-->
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top"> <a class="footer__logo" href="#">ООО “РАпарт Сервисез” 2022</a>
+						<nav class="footer__nav"> 
+							<ul class="footer__list"> 
+								<li> <a href="#">О компании</a></li>
+								<li> <a href="#">Каталог</a></li>
+								<li> <a href="#">Серверы</a></li>
+								<li> <a href="#">Новости</a></li>
+								<li> <a href="#">Контакты</a></li>
+								<li> <a href="#">Cоут</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__bottom"> 
+						<div class="footer__license">© ️все права защищены</div><a class="footer__link footer__link--hot-line" href="#">Горячая линия</a><a class="footer__link footer__link--user-agreement" href="#">Пользовательское соглашение</a>
+					</div>
+				</div>
+			</footer>
+			<!--	/footer-->
+		</div>
+		<script src="js/jquery.min.js"> </script>
+		<script src="js/plugins/jquery.fancybox.min.js"></script>
+		<script src="js/plugins/swiper-bundle.min.js"> </script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

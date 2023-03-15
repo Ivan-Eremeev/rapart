@@ -1,0 +1,110 @@
+/* news */
+.news { 
+  margin-bottom: 50px;
+  &__item {
+    display: block;
+    height: 100%;
+    color: $text_color;
+    &--no-image {
+      border-radius: 0 10px;
+      .news__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        min-height: 280px;
+        padding: 40px;
+      }
+    }
+    &--gray {
+      background-color: $gray_color;
+      .news__text {
+        color: $primary_color;
+      }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          .news__text {
+            color: $text_color;
+          }
+        }
+      }
+    }
+    &--blue {
+      background-color: $primary_color;
+      .news__text {
+        color: #fff;
+      }
+      .news__date {
+        color: #fff;
+      }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          .news__text {
+            color: $grayText_color;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        color: $primary_color;
+      }
+    }
+  }
+  &__img {
+    height: 210px;
+    margin-bottom: 25px;
+    border-radius: 0 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    
+  }
+  &__date {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: $grayText_color;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.1s;
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+      margin-top: -24px;
+      > * {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 24px;
+      }
+    }
+    &__item {
+      &--no-image {
+        .news__content {
+          padding: 20px;
+        }
+      }
+    }
+    &__img {
+      height: 178px;
+      margin-bottom: 12px;
+    }
+    &__date {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+/* /news */

@@ -1,0 +1,97 @@
+extends core/base.pug
+
+block title 
+  title Новости
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      include blocks/page-head.pug
+      +page-head('Новости')
+
+      // news
+      .news
+        .container 
+          .row.gy-3 
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-1.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text РАпарт принял участие в Симпозиуме эксплуатантов самолета SSJ100
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-2.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text РАпарт запускает расширенную версию личного кабинета пользователя на сайте
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-3.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text Компания Rapart Services успешно прошла сертификационный аудит
+            .col-lg-8.col-sm-6 
+              a(href="#").news__item.news__item--no-image.news__item--gray
+                .news__content
+                  .news__date 02.11.2021
+                  .news__text РАпарт осуществляет капитальный ремонт стоек шасси для SSJ 100
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item.news__item--no-image.news__item--blue
+                .news__content
+                  .news__date 02.11.2021
+                  .news__text ОАК создаёт ангарный комплекс
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-4.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text ОАК и МАИ подписали соглашение
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-5.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text XV Международный авиационно-космический салон
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-6.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text Заключено сервисное соглашение с АК "Россия"
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-7.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text РАпарт одобрен Минпромторгом
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-8.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text РАпарт сокращает сроки ремонта тормозов
+            .col-lg-4.col-sm-6 
+              a(href="#").news__item 
+                .news__img 
+                  img(src="img/news/img-9.jpg", alt="")
+                .news__content 
+                  .news__date 02.11.2021
+                  .news__text РАпарт участвует в MRO Russia&CIS 2020
+      // /news
+
+      include blocks/pagination.pug
+
+    include core/footer.pug

@@ -1,0 +1,128 @@
+extends core/base.pug
+
+block title 
+  title Главная
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome
+      .welcome
+        .welcome__img 
+          img(src="img/welcome-bg.jpg", alt="")
+        .container 
+          .welcome__content 
+            h1.title Поставляем авиационное техническое имущество
+            .welcome__sub для самолетов SSJ-100
+            a.welcome__link(href="#") Смотреть  каталог
+              svg(class="icon-arrow-right-long")
+                use(xlink:href="img/sprite.svg#arrow-right-long")
+      // /welcome
+
+      // services
+      .services
+        .container 
+          h2.subtitle.subtitle--uppercase Услуги и сервисы
+          .row.gy-3
+            .col-lg-3.col-md-6.col-12
+              a(href="#").services__item 
+                .services__img 
+                  picture 
+                    source(media="(max-width: 768px)", srcset="img/services/img-1-mobile.jpg")
+                    img(src="img/services/img-1.jpg", alt="")
+                .services__name Ремонт
+            .col-lg-3.col-md-6.col-12
+              a(href="#").services__item 
+                .services__img 
+                  picture 
+                    source(media="(max-width: 768px)", srcset="img/services/img-2-mobile.jpg")
+                    img(src="img/services/img-2.jpg", alt="")
+                .services__name Поставка
+            .col-lg-3.col-md-6.col-12
+              a(href="#").services__item 
+                .services__img 
+                  picture 
+                    source(media="(max-width: 768px)", srcset="img/services/img-3-mobile.jpg")
+                    img(src="img/services/img-3.jpg", alt="")
+                .services__name Обмен
+            .col-lg-3.col-md-6.col-12
+              a(href="#").services__item 
+                .services__img 
+                  picture 
+                    source(media="(max-width: 768px)", srcset="img/services/img-4-mobile.jpg")
+                    img(src="img/services/img-4.jpg", alt="")
+                .services__name Аренда
+            .col-12 
+              a(href="#").services__item 
+                .services__img 
+                  picture 
+                    source(media="(max-width: 768px)", srcset="img/services/img-5-mobile.jpg")
+                    img(src="img/services/img-5.jpg", alt="")
+                .services__name Каталог запчастей
+      // /services
+
+      // benefit
+      .benefit
+        .container 
+          h2.subtitle.subtitle--quote.subtitle--center Мы осознаем свою миссию в том, чтобы не допускать простои самолетов наших заказчиков из-за отсутствия запасных частей
+
+          .benefit__items 
+            .row.gy-5
+              .col-lg-4.col-md-6.col-12
+                .benefit__item 
+                  .benefit__name &#62; 70 человек
+                  .benefit__text С техническим и авиационным  опытом 
+              .col-lg-4.col-md-6.col-12
+                .benefit__item 
+                  .benefit__name 365 дней
+                  .benefit__text В году работаем для без выходных
+              .col-lg-4.col-md-6.col-12
+                .benefit__item 
+                  .benefit__name 1300 кв.м
+                  .benefit__text Складской комплекс рядом с Шереметево
+              .col-lg-4.col-md-6.col-12
+                .benefit__item 
+                  .benefit__name &#62; 15 000 позиций
+                  .benefit__text АТИ на складе в наличии
+              .col-lg-4.col-md-6.col-12
+                .benefit__item 
+                  .benefit__name 1825 дней
+                  .benefit__text Работаем с момента основания
+              .col-lg-4.col-md-6.col-12
+                .benefit__item 
+                  .benefit__link 
+                    a(href="#") Подробнее о компании
+                      svg(class="icon-arrow-right-long")
+                        use(xlink:href="img/sprite.svg#arrow-right-long")
+
+          .benefit__icons 
+            .row.gy-5.justify-content-center
+              .col-lg-4.col-md-6.col-12
+                .benefit__icons-item 
+                  .benefit__icon 
+                    svg(class="icon-like")
+                      use(xlink:href="img/sprite.svg#like")
+                  .benefit__icons-name Лояльность
+                  .benefit__icons-text Система менеджмента, сертифицированный склад АТИ и прямые контракты С ОЕМ
+              .col-lg-4.col-md-6.col-12
+                .benefit__icons-item 
+                  .benefit__icon 
+                    svg(class="icon-arrows")
+                      use(xlink:href="img/sprite.svg#arrows")
+                  .benefit__icons-name Гибкость
+                  .benefit__icons-text Продажа, обмен, ремонт, аренда, доступ на индивидуальный условиях к пулу  АТИ
+              .col-lg-4.col-md-6.col-12
+                .benefit__icons-item 
+                  .benefit__icon 
+                    svg(class="icon-safe")
+                      use(xlink:href="img/sprite.svg#safe")
+                  .benefit__icons-name Выгода
+                  .benefit__icons-text Продажа, обмен, ремонт, аренда, доступ на индивидуальный условиях к пулу  АТИ
+      // /benefit
+
+    include core/footer.pug

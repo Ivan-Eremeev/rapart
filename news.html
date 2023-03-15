@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="robots" content="noindex, nofollow">
+		<title>Новости</title>
+		<link rel="stylesheet" href="css/plugins/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body> 
+		<div class="page"> 
+			<!-- header-->
+			<header class="header">
+				<div class="header__top"> 
+					<div class="container"> 
+						<div class="header__links"> <a href="#">+7(495)798-75-44</a><a class="d-md-inline d-none" href="#">info@rapart.aero</a></div>
+						<div class="header__user-block"> <a class="header__user-icon" href="#"> 
+								<svg class="icon-man">
+									<use xlink:href="img/sprite.svg#man"></use>
+								</svg></a>
+							<div class="header__lang"> 
+								<div class="header__lang-head js-drop-btn" data-drop="langMenu">RUS
+									<svg class="icon-arrow-down">
+										<use xlink:href="img/sprite.svg#arrow-down"></use>
+									</svg>
+								</div>
+								<div class="header__lang-drop" id="langMenu"> 
+									<ul class="header__drop-list"> 
+										<li> <a href="#">En</a></li>
+										<li> <a href="#">GER </a></li>
+										<li> <a href="#">ITA</a></li>
+										<li> <a href="#">FR</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div id="headerSticky">
+						<div class="container"> <a class="header__logo" href="#"> <img src="img/logo.svg" alt=""></a>
+							<div class="hamburger hamburger--squeeze js-drop-menu" data-drop="menuMobile">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+							<nav class="header__nav" id="menuMobile"> 
+								<div class="header__close js-drop-close" data-drop="menuMobile"></div>
+								<ul class="header__list"> 
+									<li> <a href="#">О компании</a></li>
+									<li> <a href="#">Каталог</a></li>
+									<li> <a href="#">Серверы</a></li>
+									<li> <a href="#">Новости</a></li>
+									<li> <a href="#">Контакты</a></li>
+								</ul>
+								<div class="header__lang-mobile d-block d-md-none">
+									<div class="header__lang-mobile-item">RUS
+										<svg class="icon-arrow-down">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+									<div class="header__lang-mobile-drop"> 
+										<ul class="header__lang-mobile-list"> 
+											<li> <a href="#">En</a></li>
+											<li> <a href="#">GER </a></li>
+											<li> <a href="#">ITA</a></li>
+											<li> <a href="#">FR</a></li>
+										</ul>
+									</div>
+								</div><a class="header__link d-block d-md-none" href="#">Личный кабинет</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--	/header-->
+			<div class="content"> 
+								<!-- page-head-->
+								<div class="page-head">
+									<div class="page-head__img"> 
+										<picture> 
+											<source media="(max-width: 575px)" srcset="img/page-head-bg-mobile.jpg"><img src="img/page-head-bg.jpg" alt="">
+										</picture>
+									</div>
+									<div class="container"> 
+										<!-- breadcrumbs-->
+										<div class="breadcrumbs">
+											<ul> 
+												<li> <a href="#">Главная</a></li>
+												<li> <span>Новости</span></li>
+											</ul>
+										</div>
+										<!-- /breadcrumbs-->
+										<h1 class="title">Новости</h1>
+									</div>
+								</div>
+								<!-- /page-head-->
+				<!-- news-->
+				<div class="news">
+					<div class="container"> 
+						<div class="row gy-3"> 
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-1.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">РАпарт принял участие в Симпозиуме эксплуатантов самолета SSJ100</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-2.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">РАпарт запускает расширенную версию личного кабинета пользователя на сайте</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-3.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">Компания Rapart Services успешно прошла сертификационный аудит</div>
+									</div></a></div>
+							<div class="col-lg-8 col-sm-6"> <a class="news__item news__item--no-image news__item--gray" href="#">
+									<div class="news__content">
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">РАпарт осуществляет капитальный ремонт стоек шасси для SSJ 100</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item news__item--no-image news__item--blue" href="#">
+									<div class="news__content">
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">ОАК создаёт ангарный комплекс</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-4.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">ОАК и МАИ подписали соглашение</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-5.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">XV Международный авиационно-космический салон</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-6.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">Заключено сервисное соглашение с АК "Россия"</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-7.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">РАпарт одобрен Минпромторгом</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-8.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">РАпарт сокращает сроки ремонта тормозов</div>
+									</div></a></div>
+							<div class="col-lg-4 col-sm-6"> <a class="news__item" href="#"> 
+									<div class="news__img"> <img src="img/news/img-9.jpg" alt=""></div>
+									<div class="news__content"> 
+										<div class="news__date">02.11.2021</div>
+										<div class="news__text">РАпарт участвует в MRO Russia&CIS 2020</div>
+									</div></a></div>
+						</div>
+					</div>
+				</div>
+				<!-- /news-->
+				<!-- pagination-->
+				<div class="pagination">
+					<div class="container"> <a class="pagination__arrow pagination__arrow--prev" href="#"> 
+							<svg class="icon-arrow-down">
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
+							</svg></a>
+						<ul class="pagination__list"> 
+							<li> <a href="#">1</a></li>
+							<li> <a href="#">2</a></li>
+							<li> <a class="active" href="#">3</a></li>
+							<li class="d-sm-flex d-none"><a href="#">4</a></li>
+							<li class="d-sm-flex d-none"><a href="#">5</a></li>
+							<li> <span>...</span></li>
+							<li> <a href="#">12</a></li>
+						</ul><a class="pagination__arrow pagination__arrow--next" href="#"> 
+							<svg class="icon-arrow-down">
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
+							</svg></a>
+					</div>
+				</div>
+				<!-- /pagination-->
+			</div>
+			<!-- footer-->
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top"> <a class="footer__logo" href="#">ООО “РАпарт Сервисез” 2022</a>
+						<nav class="footer__nav"> 
+							<ul class="footer__list"> 
+								<li> <a href="#">О компании</a></li>
+								<li> <a href="#">Каталог</a></li>
+								<li> <a href="#">Серверы</a></li>
+								<li> <a href="#">Новости</a></li>
+								<li> <a href="#">Контакты</a></li>
+								<li> <a href="#">Cоут</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__bottom"> 
+						<div class="footer__license">© ️все права защищены</div><a class="footer__link footer__link--hot-line" href="#">Горячая линия</a><a class="footer__link footer__link--user-agreement" href="#">Пользовательское соглашение</a>
+					</div>
+				</div>
+			</footer>
+			<!--	/footer-->
+		</div>
+		<script src="js/jquery.min.js"> </script>
+		<script src="js/plugins/jquery.fancybox.min.js"></script>
+		<script src="js/plugins/swiper-bundle.min.js"> </script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

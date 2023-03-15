@@ -1,0 +1,93 @@
+@import 'mixins/mixins';
+
+@include reset(); // Сброс стилей
+
+// Переменные для кастомизации Bootstrap 5
+$grid-gutter-width: 30px; // Отступы между колонками
+$grid-columns: 12; // Колличество колонок
+$grid-breakpoints: ( // Брейкпоинты
+  xs: 0,
+  sm: 576px,
+  md: 769px,
+  lg: 1025px,
+  xl: 1200px,
+  xxl: 1300px
+) !default;
+$container-max-widths: ( // Максимальная ширина контейнера
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1250px
+) !default;
+$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+
+$gutters: (
+  0: 0,
+  1: $grid-gutter-width * 0.5,
+  2: $grid-gutter-width * 0.75,
+  3: $grid-gutter-width * 1,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 2,
+);
+$spacers: (
+  0: 0,
+  1: $grid-gutter-width * 0.5,
+  2: $grid-gutter-width * 0.75,
+  3: $grid-gutter-width * 1,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 2,
+);
+
+@import 'bootstrap/bootstrap'; // Подключение бутстрап
+
+// Шрифты
+@include font-face("Lato", "../fonts/lato/Lato-Thin", 100, normal);
+@include font-face("Lato", "../fonts/lato/Lato-ExtraLight", 200, normal);
+@include font-face("Lato", "../fonts/lato/Lato-Light", 300, normal);
+@include font-face("Lato", "../fonts/lato/Lato-Regular", normal, normal);
+@include font-face("Lato", "../fonts/lato/Lato-Medium", 500, normal);
+@include font-face("Lato", "../fonts/lato/Lato-SemiBold", 600, normal);
+@include font-face("Lato", "../fonts/lato/Lato-Bold", 700, normal);
+@include font-face("Lato", "../fonts/lato/Lato-Black", 800, normal);
+@include font-face("Lato", "../fonts/lato/Lato-ExtraBold", 900, normal);
+
+// Цвета
+$primary_color: #4163BC;
+$primaryHov_color: #002D76;
+$gray_color: #F8F8F8;
+$text_color: #151519;
+$grayText_color: #828282;
+$border_color: #D9D9D9;
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'hamburgers/hamburgers';
+@import 'blocks/tabs';
+@import 'blocks/title';
+@import 'blocks/subtitle';
+@import 'blocks/btn';
+
+@import 'blocks/header';
+@import 'blocks/welcome';
+@import 'blocks/services';
+@import 'blocks/benefit';
+@import 'blocks/page-head';
+@import 'blocks/breadcrumbs';
+@import 'blocks/about';
+@import 'blocks/director';
+@import 'blocks/staff';
+@import 'blocks/tabslider';
+@import 'blocks/partners';
+@import 'blocks/services-page';
+@import 'blocks/news';
+@import 'blocks/pagination';
+@import 'blocks/post';
+@import 'blocks/more-news';
+@import 'blocks/sort';
+@import 'blocks/catalog';
+@import 'blocks/catalog-list';
+@import 'blocks/product';
+@import 'blocks/contact';
+
+@import 'blocks/footer';
