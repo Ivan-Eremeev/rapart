@@ -332,4 +332,32 @@ window.onload = function () {
   }
   langMobileToggle();
 
+  // Карта
+  if ($('#map').length) {
+    ymaps.ready(initMap);
+  }
+
+  function initMap() {
+    myMap = new ymaps.Map('map', {
+      center: [55.97944653410656, 37.372367338623036],
+      zoom: 15,
+      controls: ['zoomControl']
+    }, {
+      searchControlProvider: 'yandex#search'
+    });
+    myMap.geoObjects
+      .add(new ymaps.Placemark([55.97779306877145, 37.37212549999999], {
+        iconCaption: 'Офис'
+      }, {
+        preset: 'islands#icon',
+        iconColor: '#1550A2'
+      }))
+      .add(new ymaps.Placemark([55.98064356874894, 37.37253899999998], {
+        iconCaption: 'Склад'
+      }, {
+        preset: 'islands#icon',
+        iconColor: '#1550A2'
+      }));
+  };
+
 }

@@ -4,17 +4,6 @@
   &__item {
     margin-bottom: 50px;
   }
-  &__map-btn {
-    cursor: pointer;
-    user-select: none;
-    @include media-breakpoint-up(md) {
-      &:hover {
-        .contact__text {
-          color: $primary_color;
-        }
-      }
-    }
-  }
   &__title {
     font-weight: 700;
     font-size: 20px;
@@ -46,6 +35,36 @@
           color: $primaryHov_color;
         }
       }
+    }
+  }
+  #map {
+    height: 100%;
+  }
+  @include media-breakpoint-down(lg) {
+    #map {
+      height: 300px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    &__item {
+      margin-bottom: 30px;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 167.5%;
+    }
+    &__link {
+      font-size: 16px;
+    }
+    &__tel {
+      font-size: 18px;
+    }
+    #map {
+      height: 196px;
     }
   }
 }
