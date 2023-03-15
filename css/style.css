@@ -9209,15 +9209,17 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .product__img {
   width: 330px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 40px;
-}
-.product__img img {
   border-radius: 10px;
+  overflow: hidden;
 }
 .product__content {
   -webkit-box-flex: 1;

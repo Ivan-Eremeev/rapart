@@ -7,14 +7,14 @@
   }
   &__row {
     display: flex;
+    align-items: flex-start;
   }
   &__img {
     width: 330px;
     flex-shrink: 0;
     margin-right: 40px;
-    img {
-      border-radius: 10px;
-    }
+    border-radius: 10px;
+    overflow: hidden;
   }
   &__content {
     flex-grow: 1;
